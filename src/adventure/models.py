@@ -10,11 +10,11 @@ class Room(models.Model):
     description = models.TextField(default='DEFAULT DESCRIPTION')
     coordinates = models.TextField(default='DEFAULT COORDINATES')
     players = models.CharField(defualt='[]')
-    items = models.CharField(default='[]')
-    exits = models.CharField(default='[]')
+    items = models.CharField(max_length=200, default='[]')
+    exits = models.CharField(max_length=200, default='[]')
     cooldown = models.IntegerField(default=20)
-    errors = models.CharField(default='[]')
-    messages = models.CharField(default='[]')
+    errors = models.CharField(max_length=200, default='[]')
+    messages = models.CharField(max_length=200, default='[]')
 
     # "Unpacked" exits for connecting rooms/vertices
     n_to = models.IntegerField(default=0)
@@ -96,10 +96,10 @@ class Player(models.Model):
     gold = models.IntegerField(default=0)
     bodywear = models.TextField(default='NONE')
     footwear = models.TextField(default='NONE')
-    inventory = models.CharField(default='[]')
-    status = models.CharField(default='[]')
-    errors = models.CharField(default='[]')
-    messages = models.CharField(default='[]')
+    inventory = models.CharField(max_length=200, default='[]')
+    status = models.CharField(max_length=200, default='[]')
+    errors = models.CharField(max_length=200, default='[]')
+    messages = models.CharField(max_length=200, default='[]')
 
 
     def set_inventory(self, items):
