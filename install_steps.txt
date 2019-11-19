@@ -17,3 +17,4 @@ Instructions from https://www.codingforentrepreneurs.com/blog/install-django-on-
 14. pipenv install python-decouple
 15. (Create .env file in ./src/cs22build2/ and move settings.py's SECRET_KEY there)
 16. python manage.py createsuperuser
+17. python manage.py startapp adventure
