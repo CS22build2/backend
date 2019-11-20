@@ -1,0 +1,24 @@
+Instructions from https://www.codingforentrepreneurs.com/blog/install-django-on-linux-ubuntu/
+
+
+1. pipenv is already installed
+2. pipenv install requests
+3. pipenv shell
+4. python --version (returns 3.6.8)
+5. deactivate
+6. sudo apt install python-setuptools python-dev build-essential
+7. pipenv install django
+8. mkdir src
+9. pipenv shell
+10. django-admin startproject cs22build2 ./src
+11. cd src
+12. python manage.py migrate
+13. python manage.py runserver (confirm Django works)
+14. pipenv install python-decouple
+15. (Create .env file in ./src/cs22build2/ and move settings.py's SECRET_KEY there)
+16. python manage.py createsuperuser
+17. python manage.py startapp adventure
+
+To deploy to Heroku I followed this Medium article:
+https://medium.com/@BennettGarner/deploying-django-to-heroku-procfile-static-root-other-pitfalls-e7ab8b2ba33b
+
