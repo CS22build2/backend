@@ -18,3 +18,7 @@ Instructions from https://www.codingforentrepreneurs.com/blog/install-django-on-
 15. (Create .env file in ./src/cs22build2/ and move settings.py's SECRET_KEY there)
 16. python manage.py createsuperuser
 17. python manage.py startapp adventure
+
+To deploy to Heroku I followed this Medium article:
+https://medium.com/@BennettGarner/deploying-django-to-heroku-procfile-static-root-other-pitfalls-e7ab8b2ba33b
+
